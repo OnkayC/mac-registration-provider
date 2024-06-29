@@ -216,6 +216,40 @@ var offsets_14_4_1 = imdOffsetTuple{
 	},
 }
 
+var offsets_14_4 = imdOffsetTuple{
+	x86: imdOffsets{
+		ReferenceSymbol:            "IDSProtoKeyTransparencyTrustedServiceReadFrom",
+		ReferenceAddress:           0x0d6715,
+		NACInitAddress:             0x557cd0,
+		NACKeyEstablishmentAddress: 0x537d10,
+		NACSignAddress:             0x54b000,
+	},
+	arm64: imdOffsets{
+		ReferenceSymbol:            "IDSProtoKeyTransparencyTrustedServiceReadFrom",
+		ReferenceAddress:           0x0c0b84,
+		NACInitAddress:             0x4c2468,
+		NACKeyEstablishmentAddress: 0x4afccc,
+		NACSignAddress:             0x489ed8,
+	},
+}
+
+var offsets_14_5 = imdOffsetTuple{
+	x86: imdOffsets{
+		ReferenceSymbol:            "IDSProtoKeyTransparencyTrustedServiceReadFrom",
+		ReferenceAddress:           0xd6e99,
+		NACInitAddress:             0x559520,
+		NACKeyEstablishmentAddress: 0x539560,
+		NACSignAddress:             0x54c850,
+	},
+	arm64: imdOffsets{
+		ReferenceSymbol:            "IDSProtoKeyTransparencyTrustedServiceReadFrom",
+		ReferenceAddress:           0xbf0f0,
+		NACInitAddress:             0x4c1acc,
+		NACKeyEstablishmentAddress: 0x4af330,
+		NACSignAddress:             0x48953c,
+	},
+}
+
 // offsets is a map from sha256 hash of identityservicesd to the function pointer offsets in that binary.
 var offsets = map[[32]byte]imdOffsetTuple{
 	// macOS 10.13.6
@@ -266,8 +300,12 @@ var offsets = map[[32]byte]imdOffsetTuple{
 	hexToByte32("034fc179e1cce559931a8e46866f54154cb1c5413902319473537527a2702b64"): offsets_14_2,
 	// macOS 14.3
 	hexToByte32("d3c6986fefcbd2efea2a8a7c88104bf22d60d1f4f2bbf3615a1e3ce098aba765"): offsets_14_3,
+	// macOS 14.4
+	hexToByte32("b82c5c6c9010a42cb64397e3760dd31144cbd471126111de9bb27fa3d2d2639a"): offsets_14_4,
 	// macOS 14.4.1
 	hexToByte32("b82c5c6c9010a42cb64397e3760dd31144cbd471126111de9bb27fa3d2d2639a"): offsets_14_4_1,
+	// macOS 14.5
+	hexToByte32("482839377ea4780e90252aa48763800d90f272a3ba19b9ff6752ef9d7620df26"): offsets_14_5,
 }
 
 type imdOffsetTuple struct {
